@@ -1,0 +1,19 @@
+{
+  "timeZone": "Africa/Johannesburg",
+  "dependencies": {
+    "enabledAdvancedServices": [
+      {
+        "userSymbol": "DriveApp",
+        "version": "v2",
+        "serviceId": "drive"
+      },
+      {
+        "userSymbol": "GmailApp",
+        "version": "v1",
+        "serviceId": "gmail"
+      }
+    ]
+  },
+  "exceptionLogging": "STACKDRIVER",
+  "runtimeVersion": "V8"
+}
