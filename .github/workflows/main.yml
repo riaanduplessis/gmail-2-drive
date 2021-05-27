@@ -1,20 +1,17 @@
-name: CD
+name: main
 
 on:
   push:
-    branches: [ main ]
-  pull_request:
     branches: [ main ]
 
   workflow_dispatch:
 
 jobs:
-  build:
+  CD:
     runs-on: ubuntu-latest
 
     steps:
       - uses: actions/checkout@v2
-
       - name: Push to Apps Script
         uses: daikikatsuragawa/clasp-action@v1
         with:
@@ -25,4 +22,5 @@ jobs:
           clientSecret: ${{ secrets.CLIENT_SECRET }}
           scriptId: ${{ secrets.SCRIPT_ID }}
           command: 'push'
+          
 
